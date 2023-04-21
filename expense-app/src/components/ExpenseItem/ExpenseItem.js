@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ExpenseItem.css"
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
   return (
     <div className='expense-item'>
       <div className='date-container'>

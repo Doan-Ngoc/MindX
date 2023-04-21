@@ -42,10 +42,6 @@
 
 .expense {
     margin-left: auto;
-    /* push this to the right edge of the container */
-}
-
-.expense {
     font-weight: 700;
     font-size: 24px;
     color: #FFFFFF;
