@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+.chart-container {
+    background: #E1CAE4;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.month-list {
+    width: 100%;
+}
+
+.chart-item-list {
+    width: 100%;
+    padding: 10px 20px 0px;
+}
+
+.month-list span {
+    font-family: 'Nova Mono', monospace;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 20px 5px;
+}

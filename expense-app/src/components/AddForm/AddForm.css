@@ -1,0 +1,94 @@
+.add-form {
+  background-color: var(--primary-color-1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 20px 30px;
+}
+
+.form-input {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.input-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-item label {
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.input-item input {
+  width: 77%;
+  font-weight: 700;
+  font-size: 18px;
+  color: #B0B0B0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 0 solid #B0B0B0;
+}
+
+/*Làm mờ placeholder*/
+::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+:-moz-placeholder {
+  opacity: 0.5;
+}
+
+::-moz-placeholder {
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+::placeholder {
+  opacity: 0.5;
+}
+
+.form-btn {
+  margin: 10px 0 5px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 21px;
+}
+
+.form-btn button {
+  padding: 8px 16px;
+  border: 1px solid #862796;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.add-btn {
+  background-color: var(--primary-color-2);
+  color: #FFFFFF;
+}
+
+.cancel-btn {
+  background-color: #D0D0D0;
+  color: #6A6A6A;
+}
+
+/*Hide default number & date input icon*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+}

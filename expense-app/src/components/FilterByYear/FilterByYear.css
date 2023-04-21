@@ -1,0 +1,33 @@
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-section span {
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.filter-section select {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  padding: 15px 65px;
+  border-radius: 5px;
+
+
+  /* change the dropdown icon */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23000' d='M106.7 192l148.7 160 148.7-160z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+  background-position: right 5px center;
+  background-size: 30px;
+  background-color: #FFFFFF;
+}
+
+.filter-section select option {
+  font-weight: 600;
+}
