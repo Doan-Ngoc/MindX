@@ -2,23 +2,15 @@ import React from 'react'
 import "./ChartContainer.css"
 import ChartItem from '../ChartItem/ChartItem'
 
-const ChartContainer = () => {
+const ChartContainer = (props) => {
+  const { selectedYear, expenseList } = props
+
   return (
     <div className='chart-container '>
-      <div className='chart-item-list d-flex flex-wrap justify-content-between '>
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-        <ChartItem />
-      </div>
+      <ChartItem
+        key={selectedYear}
+        selectedYear={selectedYear}
+        expenseList={expenseList} />
       <div className='month-list d-flex flex-wrap justify-content- '>
         <span className="col-lg-1 col-md-2 col-sm-3 mb-3">Jan</span>
         <span className="col-lg-1 col-md-2 col-sm-3 mb-3">Feb</span>

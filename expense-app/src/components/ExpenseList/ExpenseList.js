@@ -1,10 +1,9 @@
 import React from 'react'
-import ExpenseItem from '../ExpenseItem/ExpenseItem'
 import "./ExpenseList.css"
 
 const ExpenseList = (props) => {
   const { expenseList } = props
-  console.log(expenseList)
+
   const ExpenseItems = expenseList && expenseList.map(expenseItem => {
     const dateObject = new Date(expenseItem.expenseDate)
     const month = dateObject.toLocaleString('default', { month: 'long' });

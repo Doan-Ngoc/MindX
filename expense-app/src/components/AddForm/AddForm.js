@@ -45,13 +45,14 @@ const AddForm = (props) => {
                 <div className='input-item'>
                     <label htmlFor="amount-input">Amount</label>
                     <input id='name-input' name="expenseAmount" type="number" value={expenseDetails.expenseAmount}
-                        onChange={formInputChangeHandler}
-                        placeholder="Enter amount here..."></input>
+                        min="1" placeholder="Enter amount here..."
+                        onChange={formInputChangeHandler}></input>
                 </div>
                 <div className='input-item'>
                     <label htmlFor="amount-input">Date</label>
                     <input id='name-input' name="expenseDate" type="date" value={expenseDetails.expenseDate}
-                        onChange={formInputChangeHandler}></input>
+                        onChange={formInputChangeHandler}
+                        min="2021-01-01" max="2024-12-31"></input>
                 </div>
             </div>
             <div className='form-btn'>

@@ -1,15 +1,21 @@
 import React from 'react'
 import './FilterByYear.css'
+import { useState } from 'react';
 
-const FilterByYear = () => {
+const FilterByYear = (props) => {
+  const { years, selectedYear, getSelectedYear } = props
+  const handleYearChange = (event) => {
+    getSelectedYear(event.target.value)
+  }
   return (
     <div className='filter-section'>
       <span>Filter by year</span>
-      <select defaultValue="2022">
-        <option value = "2021">2021</option>
-        <option value = "2022">2022</option>
-        <option value = "2023">2023</option>
-        <option value = "2024">2024</option>
+      <select value={selectedYear} onChange={handleYearChange}>
+        {years.map((year) => (
+          <option key={year} value={year} >
+            {year}
+          </option>
+        ))}
       </select>
     </div>
   )

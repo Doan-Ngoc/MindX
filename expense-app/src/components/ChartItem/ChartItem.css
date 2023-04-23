@@ -1,3 +1,8 @@
+.chart-item-list {
+  width: 100%;
+  padding: 10px 20px 0px;
+}
+
 .chart-item {
   width: 21px;
   height: 140px;
@@ -12,7 +17,6 @@
   bottom: 0;
   width: 100%;
   background-color: #3D15A9;
-  height: 50%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
