@@ -17,6 +17,5 @@
   bottom: 0;
   width: 100%;
   background-color: #3D15A9;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-radius: 50px;
 }

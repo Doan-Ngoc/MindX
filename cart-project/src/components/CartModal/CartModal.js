@@ -34,8 +34,6 @@
 </tbody>)}
   
   return (
-    <div className="cart-section modal fade" id="cart" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div className="modal-dialog modal-lg" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Cart</h5>
@@ -79,8 +77,6 @@
             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
-      </div>
-    </div>
   )
   }
   export default CartModal

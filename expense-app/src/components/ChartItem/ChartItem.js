@@ -12,7 +12,6 @@ const ChartItem = (props) => {
   expensesForSelectedYear.forEach((expense) => {
     const month = new Date(expense.expenseDate).getMonth()
     monthlyExpenses[month] += parseInt(expense.expenseAmount)
-   console.log(monthlyExpenses[0])
   })
   //Set giá trị max cho các bar
   const maxExpense = 1000

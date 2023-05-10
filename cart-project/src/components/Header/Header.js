@@ -1,26 +1,28 @@
 import {FaCartPlus} from "react-icons/fa";
 import CartModal from "../CartModal/CartModal";
+import { Link } from "react-router-dom";
+import CartPage from '../../pages/CartPage';
 
 export default function Header(props) {
     return (
         <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <a className="navbar-brand" href="#">Shoppi</a>
+  <Link className="navbar-brand" to = "/">Shoppi</Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon" />
   </button>
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+        <Link className="nav-link" to = "/">Home</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">About Us</a>
+        <Link className = "nav-link" to="/about-us">About Us</Link>
       </li>
     </ul>
-    <div type="button" className="btn btn-primary d-flex align-items-center" data-toggle="modal" data-target="#cart">
+        <Link className="btn btn-primary d-flex align-items-center" to="/cart">
       <FaCartPlus className="mr-3"/><span>({props.cart.length})</span>
-      </div>
+      </Link>
 </div>
 </nav>
         </>

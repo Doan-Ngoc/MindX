@@ -58,7 +58,6 @@ function App() {
       else { return todo }
     })
     setTodoList(newTodoList)
-    console.log(todoList)
     setEditedTodoId(null)
   }
 

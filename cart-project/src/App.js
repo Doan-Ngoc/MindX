@@ -5,6 +5,12 @@ import ProductList from './components/ProductList/ProductList';
 import CartModal from './components/CartModal/CartModal';
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
+import {Routes, Route} from 'react-router-dom'
+import AboutUs from './pages/AboutUs'
+import Homepage from './pages/Homepage';
+import CartPage from './pages/CartPage';
+import NotFound from './pages/NotFound';
+import React from 'react';
 
 function App() {
   const initialProducts = [
@@ -105,24 +111,21 @@ const onDeleteCartItem  = (productID) => {
     <div className="App">
       <Header cart = {cart}/>
       <main className='container py-3'>
-        <div className = "row">
-          <div className='col-12 col-md-4'>
-          <AddProductForm 
-          onAddNewProductToProductList= {onAddNewProductToProductList}
-          productNumber = {products.length}/>
-          </div>
-          <div className='col-12 col-md-8'>
-            <ProductList 
-            products={products} 
-            onAddToCart={onAddProductToCart}/>
-          </div>
-        </div>
-      </main>
-      <CartModal 
-      cart = {cart}
-      onInCreaseCartQuantity = {onInCreaseCartQuantity}
-      onDeCreaseCartQuantity = {onDeCreaseCartQuantity}
-      onDeleteCartItem  = {onDeleteCartItem }/>
+      <Routes>
+        <Route path = "/" element= {<Homepage 
+        onAddNewProductToProductList= {onAddNewProductToProductList}
+        productNumber = {products.length}
+        products={products} 
+        onAddToCart={onAddProductToCart}/>}></Route>
+          <Route path = "/about-us" element = {<AboutUs />}> </Route>
+          <Route path = "/cart" element = {<CartPage 
+          cart = {cart}
+          onInCreaseCartQuantity = {onInCreaseCartQuantity}
+          onDeCreaseCartQuantity = {onDeCreaseCartQuantity}
+          onDeleteCartItem  = {onDeleteCartItem }/>}> </Route>
+          <Route path= "*" element = {<NotFound />}> </Route>
+        </Routes>
+        </main>
     </div>
   );
 }
