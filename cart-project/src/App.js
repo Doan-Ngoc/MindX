@@ -11,6 +11,8 @@ import Homepage from './pages/Homepage';
 import CartPage from './pages/CartPage';
 import NotFound from './pages/NotFound';
 import React from 'react';
+import Admin from './pages/Admin';
+import AppContext from './contexts/AppContext';
 
 function App() {
   const initialProducts = [
@@ -108,16 +110,19 @@ const onDeleteCartItem  = (productID) => {
   setCart(clonedcart)
 }
   return (
+    <AppContext.Provider
+    value = {{
+      products: products, 
+      onAddToCart: onAddProductToCart,
+      onAddNewProductToProductList: onAddNewProductToProductList
+    }}>
     <div className="App">
       <Header cart = {cart}/>
       <main className='container py-3'>
       <Routes>
-        <Route path = "/" element= {<Homepage 
-        onAddNewProductToProductList= {onAddNewProductToProductList}
-        productNumber = {products.length}
-        products={products} 
-        onAddToCart={onAddProductToCart}/>}></Route>
+        <Route path = "/" element= {<Homepage />}></Route>
           <Route path = "/about-us" element = {<AboutUs />}> </Route>
+          <Route path= "/admin" element = {<Admin/>}> </Route>
           <Route path = "/cart" element = {<CartPage 
           cart = {cart}
           onInCreaseCartQuantity = {onInCreaseCartQuantity}
@@ -127,6 +132,7 @@ const onDeleteCartItem  = (productID) => {
         </Routes>
         </main>
     </div>
+    </AppContext.Provider>
   );
 }
 

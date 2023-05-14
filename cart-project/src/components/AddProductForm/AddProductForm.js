@@ -1,6 +1,9 @@
 import { useState } from "react"
+import AppContext from "../../contexts/AppContext"
+import { useContext } from "react"
 
-const AddProductForm = (props) => {
+const AddProductForm = () => {
+  const {productNumber, onAddNewProductToProductList} = useContext(AppContext)
     const [productValues, setProductValues] = useState({
         productName: "",
         productImage: "",
@@ -16,16 +19,16 @@ const AddProductForm = (props) => {
 
 const onSubmitProduct = (event) => {
     event.preventDefault()
-    props.onAddNewProductToProductList(productValues)
+    onAddNewProductToProductList(productValues)
     setProductValues({
         productName: "",
         productImage: "",
         productPrice: ""
     })
+    alert("Product added successfully")
 }
 return(<div>
 <h5>Add new product</h5>
-Cart {props.productNumber}
 <form className="mt-3" onSubmit = {onSubmitProduct}>
 <div className="mb-3">
   <label htmlFor="productName" className="form-label">

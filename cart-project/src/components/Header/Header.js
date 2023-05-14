@@ -19,9 +19,12 @@ export default function Header(props) {
       <li className="nav-item">
         <Link className = "nav-link" to="/about-us">About Us</Link>
       </li>
+      <li className="nav-item">
+        <Link className = "nav-link" to="/admin">Admin</Link>
+      </li>
     </ul>
         <Link className="btn btn-primary d-flex align-items-center" to="/cart">
-      <FaCartPlus className="mr-3"/><span>({props.cart.length})</span>
+      <FaCartPlus className="mr-3" style={{color: "white"}}/><span>({props.cart.length})</span>
       </Link>
 </div>
 </nav>
